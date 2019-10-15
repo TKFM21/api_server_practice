@@ -11,5 +11,17 @@ class Todo {
     }
 }
 
+for(let i = 0; i < 5; i++) {
+    const index = i + 1;
+    const todo = new Todo({
+        title: 'title' + index,
+        body: 'body' + index
+    });
+    todos.push(todo);
+}
+
 module.exports = {
+    findAll: () => {
+        return todos.slice();
+    }
 };
